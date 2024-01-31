@@ -39,3 +39,9 @@ jobs:
         run: |
           docker build -t haitbourhim/csa-backend:latest .
           docker push haitbourhim/csa-backend:latest
+
+      - name: Build and push MySQL Docker image
+        run: |
+          docker build -t haitbourhim/csa-database:latest ./database
+          docker push haitbourhim/csa-database:latest
+

@@ -1,5 +1,4 @@
 # Use an official OpenJDK runtime as a parent image
-#FROM adoptopenjdk:17-jre-hotspot
 FROM openjdk:17-oracle
 
 # Set the working directory to /app
@@ -16,3 +15,4 @@ ENV SPRING_PROFILES_ACTIVE=production
 
 # Run application when the container launches
 CMD ["java", "-jar", "csa-back-0.0.1-SNAPSHOT.jar"]
+
