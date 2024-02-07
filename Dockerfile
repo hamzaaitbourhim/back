@@ -11,7 +11,7 @@ COPY build/libs/csa-back-0.0.1-SNAPSHOT.jar /app
 EXPOSE 8080
 
 # Define environment variable
-ENV SPRING_PROFILES_ACTIVE=production
+#ENV SPRING_PROFILES_ACTIVE=production
 
 # Run application when the container launches
 CMD ["java", "-jar", "csa-back-0.0.1-SNAPSHOT.jar"]
