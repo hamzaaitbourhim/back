@@ -13,7 +13,7 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: root
+          #MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: ubo_db
           MYSQL_USER: user
           MYSQL_PASSWORD: password
@@ -37,6 +37,12 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '17'
+
+      - name: Download MySQL Connector
+        run: |
+          wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.26/mysql-connector-java-8.0.26.jar
+          mkdir -p libs
+          mv mysql-connector-java-8.0.26.jar libs/
 
       - name: Make Gradlew Executable
         run: chmod +x ./gradlew
