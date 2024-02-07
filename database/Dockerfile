@@ -7,3 +7,5 @@ ENV MYSQL_PASSWORD=password
 
 
 #ADD your-schema.sql /docker-entrypoint-initdb.d/
+
+
