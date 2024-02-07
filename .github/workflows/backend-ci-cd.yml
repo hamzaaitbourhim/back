@@ -19,6 +19,11 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Set up Gradle
+        uses: gradle/setup-gradle@v2
+        with:
+          gradle-version: '8.5'
+
       - name: Make Gradlew Executable
         run: chmod +x ./gradlew
 
@@ -44,4 +49,6 @@ jobs:
         run: |
           docker build -t haitbourhim/csa-database:latest ./database
           docker push haitbourhim/csa-database:latest
+
+
 
