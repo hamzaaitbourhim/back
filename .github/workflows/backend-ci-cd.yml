@@ -58,7 +58,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: "haitbourhim"
-          password: "zissizriddikilos"
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
         if: success()
