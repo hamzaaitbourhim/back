@@ -13,10 +13,10 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_PASSWORD: ""
           MYSQL_DATABASE: ubo_db
-          MYSQL_USER: user
-          MYSQL_PASSWORD: password
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -25,9 +25,9 @@ jobs:
       DATABASE_HOSTNAME: "localhost"
       DATABASE_PORT: 3306
       DATABASE_NAME: "ubo_db"
-      DATABASE_USER: "user"
-      DATABASE_PASSWORD: "password"
-      DATABASE_ROOT_PASSWORD: "root"
+      DATABASE_USER: "root"
+      DATABASE_PASSWORD: "root"
+      DATABASE_ROOT_PASSWORD: ""
 
     steps:
       - name: Checkout Repository
