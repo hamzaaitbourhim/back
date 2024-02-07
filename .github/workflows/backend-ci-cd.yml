@@ -27,6 +27,7 @@ jobs:
       DATABASE_NAME: "ubo_db"
       DATABASE_USER: "user"
       DATABASE_PASSWORD: "password"
+      DATABASE_ROOT_PASSWORD: "root"
 
     steps:
       - name: Checkout Repository
