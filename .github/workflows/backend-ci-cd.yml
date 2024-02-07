@@ -60,7 +60,7 @@ jobs:
           username: "haitbourhim"
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
+      - name: Build and push Spring Boot Docker image
         if: success()
         run: |
           docker build -t haitbourhim/csa-backend:latest .
